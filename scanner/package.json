@@ -1,0 +1,30 @@
+{
+  "name": "accessisite-scanner",
+  "version": "1.0.0",
+  "description": "WCAG 2.1 AA standartlarına göre web sitelerini tarayan erişilebilirlik tarayıcısı",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "accessibility",
+    "wcag",
+    "a11y",
+    "scanner",
+    "axe-core",
+    "puppeteer"
+  ],
+  "author": "AccessiSite AI Team",
+  "license": "MIT",
+  "dependencies": {
+    "axe-core": "^4.7.0",
+    "puppeteer": "^20.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+} 
