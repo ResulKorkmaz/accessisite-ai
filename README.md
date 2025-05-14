@@ -1,5 +1,7 @@
 # AccessiSite AI - WCAG Scanner
 
+WCAG otomatik tarama & patch SaaS – AccessiSite AI
+
 Web sitelerini WCAG 2.1 AA standartlarına göre tarayan ve ihlalleri tespit eden bir tarayıcı modülü.
 
 ## Özellikler
