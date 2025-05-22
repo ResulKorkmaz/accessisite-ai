@@ -1,0 +1,298 @@
+/* Türkçe karakterler için ve genel kutu modeli ayarı */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Sade ve okunabilir bir font */
+    line-height: 1.6;
+    color: #333; /* Ana metin rengi */
+    background-color: #f9f9f9; /* Hafif bir arka plan rengi */
+}
+
+/* Temel Konteyner (Wrapper/Container): Sayfa içeriğini ortalamak ve maksimum genişlik belirlemek için */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; /* İçerik taşmalarını engellemek için */
+    padding: 0 20px; /* İç boşluk */
+}
+
+/* Header Stilleri */
+header {
+    background: #333; /* Koyu bir arka plan */
+    color: #fff; /* Beyaz metin */
+    padding: 1rem 0;
+    /* text-align: center; Logoyu ve başlığı ortala (şimdilik) - Konteyner içinden yönetilecek */
+}
+
+header .container { /* Header içindeki container'a özel hizalama */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* İçeriği ortala */
+}
+
+header #logo-placeholder { /* Logo için yer tutucu stil */
+    display: inline-block; /* veya flex item olarak */
+    width: 50px; /* Örnek boyut */
+    height: 50px;
+    background-color: #555;
+    margin-right: 15px;
+    /* vertical-align: middle; flex ile hizalandığı için gerekmeyebilir */
+}
+
+header h1 {
+    display: inline-block; /* veya flex item olarak */
+    /* vertical-align: middle; flex ile hizalandığı için gerekmeyebilir */
+}
+
+/* Navigasyon Menüsü Stilleri */
+nav {
+    background: #444; /* Navigasyon için biraz daha açık bir koyu renk */
+    color: #fff;
+    padding: 0.8rem 0;
+    /* text-align: center; Konteyner içinden yönetilecek */
+}
+nav .container { /* Nav içindeki container'a özel hizalama */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Son elemanın sağ boşluğunu kaldır */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active { /* Aktif sayfa ve üzerine gelince stil */
+    color: #f0ad4e; /* Vurgu rengi (örneğin turuncu) */
+}
+
+/* Main Alanı Stilleri */
+main {
+    padding: 20px 0; /* Konteyner zaten iç padding sağlıyor, dikey padding yeterli */
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff; /* Bölümleri beyaz arka planla ayır */
+    border-radius: 5px; /* Hafif yuvarlak köşeler */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* İnce bir gölge */
+}
+
+h2, h3 {
+    margin-bottom: 15px;
+    color: #333; /* Başlık rengi, body'den miras alır ama burada tekrar belirtilebilir */
+}
+
+/* Footer Stilleri */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Galeri Stilleri (galeri.html) */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Görseller arası boşluk */
+    justify-content: flex-start; /* Soldan başlayarak sırala */
+}
+
+.gallery figure {
+    width: calc(33.333% - 10px); /* 3'lü sıra, gap'i hesaba katarak (15px * 2/3) */
+    margin-bottom: 15px; /* Dikey boşluk */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9; /* Figür arka planı */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.gallery figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.gallery figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Hizmetler Sayfası - Resim Yer Tutucu (hizmetler.html) */
+.service-image-placeholder {
+    width: 100%;
+    min-height: 200px; /* Minimum yükseklik */
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #777;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.service-image-placeholder::before {
+    content: "Hizmet Görseli";
+}
+
+/* İletişim Formu Stilleri (iletisim.html) */
+/* Form elemanları için genel stil */
+#contact-form label, /* Form ID'si ile eşleşiyor */
+#contact-page-intro label { 
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contact-form textarea {
+    height: 120px;
+    resize: vertical; /* Kullanıcının dikeyde boyutlandırmasına izin ver */
+}
+
+#contact-form input[type="submit"] {
+    background: #f0ad4e; /* Vurgu rengi */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Hover efekti için yumuşak geçiş */
+}
+
+#contact-form input[type="submit"]:hover {
+    background: #ec971f; /* Vurgu renginin koyusu */
+}
+
+/* İletişim Sayfası - İki Sütunlu Düzen */
+.contact-container { /* Bu class iletisim.html'de kullanılacak */
+    display: flex;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta gelmesi için */
+    gap: 30px; /* Sütunlar arası boşluk */
+}
+
+.contact-info,
+.contact-form-section {
+    flex: 1; /* Eşit genişlikte yayıl */
+    min-width: 300px; /* Belirli bir genişlikten sonra alt alta düş */
+}
+
+/* İletişim bilgileri için ek stiller */
+.contact-info p {
+    margin-bottom: 10px;
+}
+.contact-info strong {
+    margin-right: 5px;
+}
+.social-media h4{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.social-media a {
+    text-decoration: none;
+    color: #f0ad4e; /* Vurgu rengi */
+    margin-right: 10px;
+}
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Harita için basit bir stil */
+#map-location iframe {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Düzenlemeler (Örnek) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    header .container, nav .container {
+        flex-direction: column; /* Header ve Nav içeriğini alt alta getir */
+        text-align: center;
+    }
+    header #logo-placeholder {
+        margin-right: 0;
+        margin-bottom: 10px; /* Logo ile başlık arasına boşluk */
+    }
+
+    nav ul li {
+        display: block; /* Nav linklerini alt alta */
+        margin: 10px 0;
+    }
+
+    .gallery figure {
+        width: calc(50% - 10px); /* 2'li sıra */
+    }
+    .contact-container {
+        flex-direction: column; /* İletişimdeki sütunları alt alta */
+    }
+    .contact-info, .contact-form-section {
+        min-width: 100%; /* Tam genişlik kullan */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery figure {
+        width: 100%; /* Tekli sıra */
+    }
+    body {
+        font-size: 0.95rem; /* Küçük ekranlarda fontu biraz küçült */
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Aktif navigasyon linki için stil - Zaten yukarıda tanımlı, burada tekrar gerek yok */
+/* nav ul li a.active {
+    font-weight: bold;
+    color: #f0ad4e;
+} */
+/* HTML dosyalarındaki style bloklarından gelen .active stili zaten nav ul li a.active içinde birleştirildi. */
+
+```
